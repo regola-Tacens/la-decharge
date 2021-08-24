@@ -4,15 +4,15 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <header>
-        <Link href="/">
-          <a>
-            <h1>
-              <span>Just Add</span>
-              <span>Marmite</span>
-            </h1>
-            <h2>Spread The Joy</h2>
-          </a>
-        </Link>
+        <nav>
+          <div className="header">
+            <h1>la Décharge</h1>
+            <div className="right">
+              <Link href="/"><a>le proprio</a></Link>
+              <Link href="/"><a>les voisins</a></Link>
+            </div>
+          </div>
+        </nav>
       </header>
 
       <div className="page-content">
@@ -20,7 +20,11 @@ export default function Layout({ children }) {
       </div>
 
       <footer>
-        <p>Copyright 2021 Just Add Marmite :)</p>
+        <div className="upper__footer">
+        </div>
+        <div className="lower__footer">
+          <p>plan site</p>
+        </div>
       </footer>
     </div>
   )
