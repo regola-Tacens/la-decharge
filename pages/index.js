@@ -22,10 +22,25 @@ export async function getStaticProps (){
 export default function Articles( {articles}) {
   console.log(articles)
   return (
-    <div className='article-list'>
-      {articles.map(article => {
-        return <ArticleCard article={article} key={article.sys.id}/>
-      })}
-    </div>
+    <main className='articles_container'>
+      <div className='articles_list'>
+        {articles.map(article => {
+          return <ArticleCard article={article} key={article.sys.id}/>
+        })}
+      </div>
+
+      <style JSX>{`
+        
+        .articles_list{
+          display: flex;
+          justify-content: center;
+        }
+        @media only screen and (max-width: 800px) {
+          .articles_list{
+            flex-direction: column;
+          }
+        }
+      `}</style>
+    </main>  
   )
 }
