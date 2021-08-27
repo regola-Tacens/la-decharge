@@ -1,4 +1,6 @@
 import { createClient } from 'contentful'
+import Image from 'next/image'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const client = createClient({
   space : process.env.CONTENTFUL_SPACE_ID,
@@ -38,9 +40,20 @@ export async function getStaticProps ( { params }){
 
 export default function DetailArticle( { article }) {
   console.log(article)
+  const { featuredImage,  title, texteArticle } = article.fields
   return (
     <div>
-      Article
+      <div className="header_image">
+        <h1>{title}</h1>
+        <Image className='thumbnail'
+          src={`http:${featuredImage.fields.file.url}`}
+          width={featuredImage.fields.file.details.image.width}
+          height={featuredImage.fields.file.details.image.height}
+        />
+        <p>
+          { documentToReactComponents(texteArticle) }
+        </p>
+      </div>
     </div>
   )
 }
