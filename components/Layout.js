@@ -6,9 +6,9 @@ export default function Layout({ children }) {
       <header>
         <nav>
           <div className="header">
-            <h1>la Décharge</h1>
+            <Link href="/"><a><h1>la Décharge</h1></a></Link>
             <div className="right">
-              <Link href="/"><a>le proprio</a></Link>
+              <Link href="/proprio"><a>le proprio</a></Link>
               <Link href="/"><a>les voisins</a></Link>
             </div>
           </div>

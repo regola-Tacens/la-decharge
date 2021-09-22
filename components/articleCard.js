@@ -26,7 +26,7 @@ export default function ArticleCard({article}) {
             <style JSX>{`
                 .article_container{
                     padding:5%;
-                    width : 50%;
+                    width : 40%;
                     display : flex;
                     flex-direction: column;  
                 }

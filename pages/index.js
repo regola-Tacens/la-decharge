@@ -32,8 +32,10 @@ export default function Articles( {articles}) {
       <style JSX>{`
         
         .articles_list{
+          width:100%;
           display: flex;
-          justify-content: center;
+          flex-wrap:wrap;
+          justify-content: left;
         }
         @media only screen and (max-width: 800px) {
           .articles_list{

@@ -42,18 +42,38 @@ export default function DetailArticle( { article }) {
   console.log(article)
   const { featuredImage,  title, texteArticle } = article.fields
   return (
-    <div>
-      <div className="header_image">
+    <div className="article">
+      <div >
         <h1>{title}</h1>
         <Image className='thumbnail'
           src={`http:${featuredImage.fields.file.url}`}
           width={featuredImage.fields.file.details.image.width}
           height={featuredImage.fields.file.details.image.height}
         />
-        <p>
+        <p className="article__text">
           { documentToReactComponents(texteArticle) }
         </p>
       </div>
+      <style JSX>{`
+                .article{
+                    width: 75%;
+                    display: flex;
+                    justify-content:center;
+                    align-items:center;
+                    flex-direction: column;  
+                }
+                .thumbnail{
+                    width:50%;
+                    object-fit : contain;
+                }
+                .article__text{
+                  white-space: pre-wrap;
+                  padding: 1rem 3rem;
+                }
+              
+                
+            `}</style>
     </div>
+    
   )
 }
