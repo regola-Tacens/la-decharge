@@ -23,7 +23,7 @@ export default function Layout({ children }) {
         <div className="upper__footer">
         </div>
         <div className="lower__footer">
-          <p>plan site</p>
+          <p> développé avec Next.js -- alimenté avec Contenful -- powered by Vercel</p>
         </div>
       </footer>
       <style JSX>{`
