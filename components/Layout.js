@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Layout({ children }) {
   return (
@@ -6,7 +7,10 @@ export default function Layout({ children }) {
       <header>
         <nav>
           <div className="header">
-            <Link href="/"><a><h1>? la Décharge</h1></a></Link>
+            <div className="left">
+              <Image className="header_logo" src="/reuse.png" width={55} height={55} />
+              <Link href="/"><a><h1 className="header_title">la Décharge</h1></a></Link>
+            </div>
             <div className="right">
               <Link href="/proprio"><a className="menulink menulink-mneme">le proprio</a></Link>
               <Link href="/"><a className="menulink menulink-mneme">les voisins</a></Link>
@@ -27,6 +31,20 @@ export default function Layout({ children }) {
         </div>
       </footer>
       <style JSX>{`
+                .header_logo{
+                  animation: rotation 10s infinite linear;
+                }
+                @keyframes rotation {
+                  from {
+                    transform: rotate(0deg);
+                  }
+                  to {
+                    transform: rotate(359deg);
+                  }
+                }
+                .header_title{
+                  margin-left:1rem;
+                }
                 .menulink{
                   cursor: pointer; 
                   text-decoration:none;

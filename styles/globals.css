@@ -32,6 +32,12 @@ header h1, header h2 {
   justify-content: space-between;
   align-items: center;
 }
+.left{
+  width:50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .right{
   width:50%;
   display: flex;
