@@ -57,7 +57,7 @@ export default function DetailArticle( { article }) {
       <style JSX>{`
                 .article{
                     width: 90%;
-                    display: flex;
+                    // display: flex;
                     flex-wrap:wrap;
                     justify-content:center;
                     align-items:center;
