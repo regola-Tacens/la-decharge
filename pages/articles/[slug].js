@@ -73,7 +73,7 @@ export default function DetailArticle( { article }) {
                 .article__text{
                   width: 90%;
                   white-space: pre-wrap;
-                  padding: 1rem 3rem;
+                  padding: 1rem 1rem;
                 }
                 code{
                   width:90%;
