@@ -8,7 +8,8 @@ export default function ArticleCard({article}) {
 
     return (
         <div className="article_container">
-            <div >
+            <div className="article_image">
+                <div className="article_tag">Canvas</div>
                 <Image className='thumbnail'
                 src={`http:${thumbnail.fields.file.url}`}
                 width={thumbnail.fields.file.details.image.width}
@@ -25,6 +26,21 @@ export default function ArticleCard({article}) {
             </div>
 
             <style JSX>{`
+                .article_tag{
+                  z-index:20;
+                  position: absolute;
+                  top:-2%;
+                  right:-2%;
+                  display:inline-block;
+                  padding:0.4rem 0.6rem;
+                  background-color: #00cc71;
+                  border-radius: 0 0 0 15px;
+                  color : black;
+                }
+                .article_image{
+                  position: relative;
+                  width:100%;
+                }
                 .article_container{ 
                     padding:5%;
                     width : 40%;
@@ -32,7 +48,7 @@ export default function ArticleCard({article}) {
                     flex-direction: column;  
                 }
                 .thumbnail{
-                    width:50%;
+                    // width:50%;
                     object-fit : contain;
                     transition: 0.2s ease-out;
                 }

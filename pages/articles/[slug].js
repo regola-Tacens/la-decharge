@@ -43,7 +43,6 @@ export default function DetailArticle( { article }) {
   const { featuredImage,  title, texteArticle } = article.fields
   return (
     <div className="article">
-      
         <h1 className="article_title">{title}</h1>
         <Image className='thumbnail'
           src={`http:${featuredImage.fields.file.url}`}
