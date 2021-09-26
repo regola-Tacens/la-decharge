@@ -4,12 +4,12 @@ import Image from 'next/image'
 
 
 export default function ArticleCard({article}) {
-    const { title, slug, thumbnail, texteArticle } = article.fields
+    const { title, slug, thumbnail, texteArticle,tag } = article.fields
 
     return (
         <div className="article_container">
             <div className="article_image">
-                <div className="article_tag">Canvas</div>
+                <div className="article_tag">{tag}</div>
                 <Image className='thumbnail'
                 src={`http:${thumbnail.fields.file.url}`}
                 width={thumbnail.fields.file.details.image.width}

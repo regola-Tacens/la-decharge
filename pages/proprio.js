@@ -44,7 +44,7 @@ export default function proprio( ) {
           .proprio__answer{
             line-height: 1.5;
             padding:2rem;
-            background-color:#E4E2F9;
+            background-color:#EAE8FF;
             
           }
           .proprio__answer__text{

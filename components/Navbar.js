@@ -34,7 +34,7 @@ const handleOpenBurgerMenu = () => {
             <a className="menulink menulink-mneme">les voisins</a>
           </Link>
           <div className="burger" onClick={handleOpenBurgerMenu}>
-            <div className="burger__btn"></div>
+            <div className={isBurgerOpen ? "burger__btn burger__btn--open" : "burger__btn"}></div>
             <div className={isBurgerOpen ? "burger__background burger--open":"burger__background"}>
               <Link className="burger__link" href="/proprio">Le Proprio</Link>
               <Link className="burger__link"  href="/">Les voisins</Link>

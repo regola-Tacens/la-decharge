@@ -99,6 +99,8 @@ footer {
   height: 3px;
   border-radius: 5px;
   background-color: black;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in;
 }
 .burger__btn::before,
 .burger__btn::after{
@@ -109,14 +111,36 @@ footer {
   left:0px;
   border-radius: 5px;
   background-color: black;
+  transition: transform 0.3s ease-in;
+
+  
 }
 
 .burger__btn::before{
-  transform: translateY(-10px);
+  transform: translateY(-10px) ;
+  transition: transform 0.3s ease-in;
 }
 .burger__btn::after{
-  transform: translateY(10px);
+  transform: translateY(10px) ;
+  transition: transform 0.3s ease-in;
 }
+
+.burger__btn--open::before {
+  transform: rotate(55deg);
+  transition: transform 0.3s ease-in;
+}
+
+.burger__btn--open::after {
+  transform: rotate(-55deg);
+  transition: transform 0.3s ease-in;
+}
+
+.burger__btn--open {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in;
+}
+
+
 
 
 @media only screen and (max-width: 600px){
@@ -138,6 +162,10 @@ footer {
     height: 50px;
     cursor: pointer;
     /* border: 2px solid black; */
+
+  }
+
+  .burger:hover{
 
   }
   .burger--open{
