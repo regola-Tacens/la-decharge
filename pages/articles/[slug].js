@@ -55,23 +55,29 @@ export default function DetailArticle( { article }) {
      
       <style JSX>{`
                 .article{
-                    width: 90%;
+                  margin: 0 auto;
+                    width: 100%;
                     // display: flex;
                     flex-wrap:wrap;
                     justify-content:center;
                     align-items:center;
                     flex-direction: column;  
+                    box-sizing:border-box;
                 }
                 .thumbnail{
-                    width:90%;
+                    width:100%;
+                    height:100%;
                     object-fit : contain;
                 }
                 .article_title{
                   width:95%;
                 }
                 .article__text{
-                  width: 100%;
+                  box-sizing: border-box;
+                  max-width: 1000px;
                   white-space: pre-wrap;
+                  background-color: var(--light-color);
+                  padding:1%;
                 }
                 code{
                   width:90%;

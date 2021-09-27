@@ -9,7 +9,7 @@ export default function ArticleCard({article}) {
     return (
         <div className="article_container">
             <div className="article_image">
-                <div className="article_tag">tag: {tag}</div>
+                <div className="article_tag">{tag}</div>
                 <Image className='thumbnail'
                 src={`http:${thumbnail.fields.file.url}`}
                 width={thumbnail.fields.file.details.image.width}

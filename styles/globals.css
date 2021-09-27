@@ -9,7 +9,7 @@ body {
   --light-color: #EAE8FF;
   --green-color: #00cc71;
   --dark-grey: #2d3142;
-  box-sizing:content-box;
+  box-sizing:border-box;
 
 
 }
