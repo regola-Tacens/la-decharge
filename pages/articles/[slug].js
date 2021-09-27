@@ -55,7 +55,7 @@ export default function DetailArticle( { article }) {
      
       <style JSX>{`
                 .article{
-                  margin: 0 auto;
+                    margin: 0 auto;
                     width: 100%;
                     // display: flex;
                     flex-wrap:wrap;

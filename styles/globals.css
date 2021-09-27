@@ -31,6 +31,7 @@ header {
   position:fixed;
   width:96%;
   height: 3rem;
+  min-height: 2rem;
   background-color: #EAE8FF;
   text-align: center;
   padding : 2%;
